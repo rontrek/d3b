@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@charset "UTF-8";
+/* CSS Document */
+
+/* #RESET
+================================================== */                        
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* #HTML5
+================================================== */
+header, section, footer, aside, nav, article, figure {
+	    display: block;
+}
+
+/* #CLEARFIX
+================================================== */
+/*From Chris Coyier CSS Tricks
+http://css-tricks.com/snippets/css/clear-fix/ */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* #BASE TYPOGRAPHY
+================================================== */
+
+/*
+=================================================
+	Basic text sizing
+=================================================
+	Set your main font size for paragraph
+
+	Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+
+*/
+
+/*body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%; /* 16px */
+/*	line-height: 1.5em;
+}*/
+
+/*
+Using a Traditional scale: 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60, 72
+	if base is 16:
+	h1 = 48 pixels → 48 ÷ 16 = 3 em
+	h2 = 36 pixels → 36 ÷ 16 = 2.25 em
+	h3 = 24 pixels → 24 ÷ 16 = 1.5 em
+	h4 = 21 pixels → 21 ÷ 16 = 1.3125 em
+	h5 = 18 pixels → 18 ÷ 16 = 1.125 em
+	h6 = 16 pixels → 16 ÷ 16 = 1 em
+*/
+h1, h2, h3, h4, h5, h6 { margin-bottom: .5em; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: 3em; line-height: 1.15em; }
+h2 { font-size: 2.25em; line-height: 1.2em; }
+h3 { font-size: 1.5em; line-height: 1.25em; }
+h4 { font-size: 1.3125em; line-height: 1.3em; }
+h5 { font-size: 1.125em; line-height: 1.35em; }
+h6 { font-size: 1em; line-height: 1.4em; }
+
+/* #Paragraphs 
+================================================== */
+p { 
+	margin-bottom: 1.25em; 
+}
+
+/* #Links
+================================================== */
+a { color: #39c; text-decoration: none;}
+a:hover { color: #39c; }
+
+
+/* #Lists
+================================================== */
+ul, ol { 
+	margin: 0 0 1.25em 0; 
+}
+
+ul li ul, ul li ol, ol li ul, ol li ol {
+	margin: 0; 
+}
+
+li {
+	margin: 0 0 0 1.875em;
+}
+
+/* #Images
+================================================== */
+a img {
+	border: none;
+}
+
+
+/* LAYOUT/GRID
+===================================== */
+
+/* See the grid CSS file */
+
+.grid .column, .grid .columns {
+	background: #ccc;
+}
+.grid section {
+	border-top: 1px dashed #dedede;
+}
+
+.grid section:first-child {
+	border-top: none;
+}
+
+.grid section p {
+	text-align: center;
+	margin: .5em 0;
+}
+
+/* SITE SPECIFIC CSS
+===================================== */
+
+header {
+	margin: 1em 0;
+	padding: 1em 0;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+	margin-bottom: .25em;
+}
+
+header p.tagline {
+	color: #999;
+	font-size: .6em;
+	line-height: .6em;
+	text-transform: uppercase;
+}
+
+.byline {
+	color: #999;
+	font-size: .6em;
+	line-height: .6em;
+	margin-top: -2em;
+	margin-bottom: 2em;
+	text-transform:uppercase;
+}
+
+.content section {
+	margin: 1em 0 0 0;
+	padding: 1em 0 0 0;
+	border-top: 1px solid #ddd;
+}
+
+footer {
+	margin: 1em 0;
+	padding: 1em 0;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+
+/* #Download Button
+================================================== */
+
+.downloadbutton {
+	margin: 0 auto;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.downloadbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+	color: #000;
+}
+.downloadbutton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
